@@ -39,6 +39,5 @@
 
 # step 2:
 
-Get the SV dataset and try to implement step 1 on the SV dataset
-
-Run on the whole genome
+- Get the SV dataset and try to implement step 1 on the SV dataset
+- Run on the whole genome
