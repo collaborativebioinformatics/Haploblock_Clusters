@@ -1,6 +1,11 @@
 # Haploblock_Clusters
 
-Software that take phased genomic data as input: 
+## Workflow
+
+<img width="476" alt="image" src="https://github.com/user-attachments/assets/de5f7ce3-0fe5-4a8e-a9eb-8f47c0bcc678">
+
+
+### Software that take phased genomic data as input: 
 
 1. HaploNet: 10.1101/gr.276813.122
 2. ChromoPainter: 10.1371/journal.pgen.1002453
