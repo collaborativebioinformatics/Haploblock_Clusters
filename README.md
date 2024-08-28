@@ -2,7 +2,7 @@
 
 ## Workflow
 
-<img width="431" alt="image" src="https://github.com/user-attachments/assets/d01b1797-1178-4ee4-adaf-972d20495fe9">
+<img width="490" alt="image" src="https://github.com/user-attachments/assets/3e0380ea-aa6c-428b-af0a-48ca6fae19ce">
 
 ### Haploblock 
 
