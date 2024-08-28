@@ -29,7 +29,7 @@
 
 ## Steps:
 # Step 1:
-Download phased vcfs from 1000 genome for one chromosome 
+Download phased vcfs from 1000 genome for one chromosome \n
 Convert shapeit vcf to xcf format - understand xcf format, how haplotype information is saved in haploblocks
 Get ARG-needle working on DNANexus
 Figure out way to merge rare variants information to the haploblocks
