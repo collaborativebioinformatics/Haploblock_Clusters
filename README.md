@@ -1,5 +1,7 @@
 # Haploblock_Clusters
 
+Software that take phased genomic data as input: 
+
 1. HaploNet: 10.1101/gr.276813.122
 2. ChromoPainter: 10.1371/journal.pgen.1002453
 3. Genomatnn: 10.7554/elife.64669
