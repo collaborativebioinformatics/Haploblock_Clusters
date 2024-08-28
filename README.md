@@ -26,3 +26,14 @@
 13. Tian, 2019: 10.1016/j.ajhg.2019.09.012
 14. FLARE: 10.1016/j.ajhg.2022.12.010
 15. Wohns, 2022: 10.1126/science.abi8264
+
+## Steps:
+# Step 1:
+Download phased vcfs from 1000 genome for one chromosome 
+Convert shapeit vcf to xcf format - understand xcf format, how haplotype information is saved in haploblocks
+Get ARG-needle working on DNANexus
+Figure out way to merge rare variants information to the haploblocks
+
+# step 2:
+Get the SV dataset and try to implement step 1 on the SV dataset
+Run on the whole genome
