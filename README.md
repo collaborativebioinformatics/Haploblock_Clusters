@@ -4,6 +4,10 @@
 
 <img width="476" alt="image" src="https://github.com/user-attachments/assets/de5f7ce3-0fe5-4a8e-a9eb-8f47c0bcc678">
 
+### Haploblock 
+
+![image](https://github.com/user-attachments/assets/cc02f217-4e04-4904-90ab-a228b9f5edf2)
+
 
 ### Software that take phased genomic data as input: 
 
