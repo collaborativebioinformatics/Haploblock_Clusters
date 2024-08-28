@@ -28,13 +28,17 @@
 15. Wohns, 2022: 10.1126/science.abi8264
 
 ## Steps:
+
 # Step 1:
-Download phased vcfs from 1000 genome for one chromosome
-Get the data in xcf format - understand xcf format, how haplotype information is saved in haploblocks
-Get ARG-needle working on DNANexus
-Get the similarity matrix
-Figure out way to merge rare variants information to the haploblocks
+
+- Download phased vcfs from 1000 genome for one chromosome
+- Get the data in xcf format - understand xcf format, how haplotype information is saved in haploblocks
+- Get ARG-needle working on DNANexus
+- Get the similarity matrix
+- Figure out way to merge rare variants information to the haploblocks
 
 # step 2:
+
 Get the SV dataset and try to implement step 1 on the SV dataset
+
 Run on the whole genome
