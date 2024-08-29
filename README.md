@@ -54,3 +54,8 @@
 - Run ARG needle (Minal)
 - Glue software together (Elena/Jedrzej/Ben)
 - Test use cases (ALL)
+
+
+## DNAnexus prototype workflow
+
+<img width="1143" alt="image" src="https://github.com/user-attachments/assets/b20014b7-da86-499b-92d1-b5a9837554d1">
