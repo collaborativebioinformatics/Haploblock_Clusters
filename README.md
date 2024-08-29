@@ -4,6 +4,8 @@
 
 <img width="490" alt="image" src="https://github.com/user-attachments/assets/3e0380ea-aa6c-428b-af0a-48ca6fae19ce">
 
+##### Arg needle takes a .hap file from beagle or shapeit.  
+
 ### Haploblock 
 
 ![image](https://github.com/user-attachments/assets/cc02f217-4e04-4904-90ab-a228b9f5edf2)
@@ -31,13 +33,19 @@
 
 # Step 1:
 
-- Download phased vcfs from 1000 genome for one chromosome
-- Get the data in xcf format - understand xcf format, how haplotype information is saved in haploblocks
-- Get ARG-needle working on DNANexus
-- Get the similarity matrix
-- Figure out way to merge rare variants information to the haploblocks
+- Download phased vcfs from 1000 genome for one chromosome (Jedrzej)
+- Get the data in xcf format - understand xcf format, how haplotype information is saved in haploblocks.  Need the .hap file.  (Minal/Elena/Umran) 
+- Get ARG-needle working on DNANexus (Ben and Minal)
+- Get SHAPEIT5 working on DNAnexus (Ben and Jedrzej)
+- Get the similarity matrix (Jedrzej)
+- Figure out way to merge rare variants information to the haploblocks (Michael and Jedrzej)
+- Figure out way to look at cancer drivers (Michael and Elena)
+- Figure out way to look at MHC/HLA/TCR (Minal and Umran)
+- Hypothetical hypothesis journeys and figures (ALL)
 
 # step 2:
 
-- Get the SV dataset and try to implement step 1 on the SV dataset
-- Run on the whole genome
+- Get the SV dataset and try to implement step 1 on the SV dataset/WGS (Elena)
+- Run ARG needle (Minal)
+- Glue software together (Elena/Jedrzej/Ben)
+- Test use cases (ALL)
