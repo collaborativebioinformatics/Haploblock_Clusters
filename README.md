@@ -4,19 +4,37 @@
 
 ## Contributors
 
-## Aim
+## Introduction
 
 The aim of the project is to develop a bioinformatics workflow for 
 
 ![image](https://github.com/user-attachments/assets/cc02f217-4e04-4904-90ab-a228b9f5edf2)
 
-## Workflow
+## Methods
+
+### Workflow
 
 <img width="316" alt="image" src="https://github.com/user-attachments/assets/92e0c5fc-49ea-440a-a004-c9e34468fa12">
 
 ## Results
 
+## Use cases
+  - rare germline mutations
+  - cancer driver mutations
+  - MHC
+
+## Future directions
+
 ## Data
+
+1000Genomes
+
+We downloaded phased VCFs (shapeit2) for 3 populations:
+- British in England and Scotland (GBR): https://www.internationalgenome.org/data-portal/population/GBR
+- Puerto Rican in Puerto Rico (PUR): https://www.internationalgenome.org/data-portal/population/PUR
+- Chinese Dai in Xishuangbanna, China (CDX): https://www.internationalgenome.org/data-portal/population/CDX
+ 
+As well as a genetic map from: ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/pilot_data/technical/reference/genetic_map_b36.tar.gz
 
 ## DNAnexus prototype workflow
 
