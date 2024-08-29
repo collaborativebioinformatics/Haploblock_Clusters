@@ -5,8 +5,11 @@
 ## Contributors
 
 ## Introduction
+Our overarching goal is to link the SV information from a sample with the population haplotype block. In theory, our genome consists of multiple haplotype blocks that are shared among the individuals from all populations. At any given locus, certain haplotypes are more prone to the disease than others depending on the type of variation they carry. Thus, linking the mutation information with the haplotype would enhance our understanding of the implications of a given mutation (or variation) and relatedness between individuals in a population. In this hackathon, we aim to develop a pipeline (or workflow) that would enable us to do so.
 
-The aim of the project is to develop a bioinformatics workflow for 
+We are taking the help of existing tools for phasing (SHAPEIT and IMPUTE) and relatedness calculation (ARG-Needle) to obtain the haplotype blocks containing SV information and their relatedness with each other. We then create a similarity matrix for the haplotype blocks for all samples within different populations. We further link this information to SVs (in vcf file).
+
+In a nutshell, the aim of the project is to develop a bioinformatics workflow for 
 
 ![image](https://github.com/user-attachments/assets/cc02f217-4e04-4904-90ab-a228b9f5edf2)
 
