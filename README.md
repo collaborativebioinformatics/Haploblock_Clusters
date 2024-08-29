@@ -39,6 +39,11 @@
 - Get SHAPEIT5 working on DNAnexus (Ben and Jedrzej)
 - Get the similarity matrix (Jedrzej)
 - Figure out way to merge rare variants information to the haploblocks (Michael and Jedrzej)
+  
+        Rare variants are identified and extracted using bcftools based on a MAF threshold of less than 1%.
+        The extracted variants are annotated with functional and genomic information using ANNOVAR.
+        Using bedtools, these variants are mapped to haploblocks
+  
 - Figure out way to look at cancer drivers (Michael and Elena)
 - Figure out way to look at MHC/HLA/TCR (Minal and Umran)
 - Hypothetical hypothesis journeys and figures (ALL)
