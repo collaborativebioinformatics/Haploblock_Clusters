@@ -2,7 +2,8 @@
 
 ## Workflow
 
-<img width="490" alt="image" src="https://github.com/user-attachments/assets/3e0380ea-aa6c-428b-af0a-48ca6fae19ce">
+<img width="408" alt="image" src="https://github.com/user-attachments/assets/908380d4-bfd2-4af1-8951-22e766800d8c">
+
 
 ##### Arg needle takes a .hap file from beagle or shapeit.  
 
