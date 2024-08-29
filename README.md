@@ -9,7 +9,7 @@ Our overarching goal is to link the SV information from a sample with the popula
 
 We are taking the help of existing tools for phasing (SHAPEIT and IMPUTE) and relatedness calculation (ARG-Needle) to obtain the haplotype blocks containing SV information and their relatedness with each other. We then create a similarity matrix for the haplotype blocks for all samples within different populations. We further link this information to SVs (in vcf file).
 
-In a nutshell, the aim of the project is to develop a bioinformatics workflow for 
+# Haplotype blocks in one individual arederived from the population 
 
 ![image](https://github.com/user-attachments/assets/cc02f217-4e04-4904-90ab-a228b9f5edf2)
 
