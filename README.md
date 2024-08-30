@@ -9,17 +9,22 @@ Our overarching goal is to link the SV information from a sample with the popula
 
 We are taking the help of existing tools for phasing (SHAPEIT and IMPUTE) and relatedness calculation (ARG-Needle) to obtain the haplotype blocks containing SV information and their relatedness with each other. We then create a similarity matrix for the haplotype blocks for all samples within different populations. We further link this information to SVs (in vcf file).
 
+
 # Haplotype blocks in one individual arederived from the population 
 
 ![image](https://github.com/user-attachments/assets/cc02f217-4e04-4904-90ab-a228b9f5edf2)
 
 ## Methods
+We built a DNAnexus applet which takes vcf files as an input and generates similarity matrix among the haplotype blocks as an output. The process involves multiple steps where first, the vcf files are phased by SHAPEIT5 to generate .map file for genetic map and by IMPUTE to generate .hap file. Both .map and .hap files are provided as an input for ARG-Needle which generates graphs for the haplotype blocks. A custom script then calculates relatedness between haplotype blocks. 
+To test our workflow, we leveraged the genomic data for chromosome 6 from 1000 Genome Project for three populations (each population containing 100 individuals), namely Dai Chinese (CDX), Puerto Rican from Puerto Rico (PUR), British from England and Scotland (GBR). 
 
 ### Workflow
 
 <img width="316" alt="image" src="https://github.com/user-attachments/assets/92e0c5fc-49ea-440a-a004-c9e34468fa12">
 
 ## Results
+
+We leverage the principles of ancestral recombination graph (ARG) that are used to determine how ancestral genetic material is passed onto its descendants considering the coalescent time and recombination. ARG-Needle program can infer history of inheritance from hundreds of thousands of genome samples. 
 
 ## Use cases
   - rare germline mutations
