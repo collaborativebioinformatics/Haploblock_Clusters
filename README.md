@@ -47,6 +47,11 @@ We leverage the principles of ancestral recombination graph (ARG) that are used 
   - MHC
 
 ## Future directions
+  - Develop an easy-to-use pipeline to build a full similarity matrix for a population or populations
+  - Understand the relative penetrance of rare variants in the background of other haploblocks
+  - Understand the relative aggressiveness of cancer driver mutations in the background of their haploblocks
+  - Understand the presentation of cancer subtypes in the context of other haploblocks
+  - Understand the relative contribution of MHC, Ig and HLA related haploblocks to infectious disease susceptibility and presentation
 
 ## Data
 
