@@ -7,6 +7,8 @@
 
 ## Contributors
 
+Ben, Jendrez, Minal, Umran, Elleni
+
 ## Introduction
 
 Our overarching goal is to generate a similarity matrix of interpopulation haploblocks, taking into account both rare and common variants. In theory, our genome consists of multiple haplotype blocks that are shared among the individuals from all populations. At any given locus, certain haplotypes are more prone to the disease than others depending on the type of variation they carry. Thus, linking the mutation information with the haplotype would enhance our understanding of the implications of a given mutation (or variation) and relatedness between individuals in a population. In this hackathon, we aim to develop a pipeline (or workflow) that would enable us to do so.
