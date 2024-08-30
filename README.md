@@ -21,6 +21,7 @@ We built a DNAnexus applet which takes vcf files as an input and generates simil
 To test our workflow, we leveraged the genomic data for chromosome 6 from 1000 Genome Project for three populations (each population containing 100 individuals), namely Dai Chinese (CDX), Puerto Rican from Puerto Rico (PUR), British from England and Scotland (GBR). 
 
 During the hackathon, we developed a prototype workflow for haplotype block similarity calculation. Firstly, as the proof-of-concept, we took phased VCF files from 1000Genomes for chromosome 6 from 3 populations. The VCF files had been phased with SHAPEIT2. Then, we used Plink2 to convert the phased VCF files to HAP files (`plink2 --vcf phased.vcf --export hap --out new_filename_prefix`). We used this data as input for ARG-needle (documentation: https://palamaralab.github.io/software/argneedle/manual/).
+Running ARG-needle on a DNAnexus cloud-workstation (https://documentation.dnanexus.com/developer/cloud-workstation) start with `pip3 install --upgrade pip`, then `PATH=$PATH:/home/dnanexus/.local/bin`, `pip install arg-needle` and finally ``.
 
 ### Workflow
 
