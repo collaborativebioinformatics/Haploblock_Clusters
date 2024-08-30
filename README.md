@@ -5,6 +5,7 @@
 ## Contributors
 
 ## Introduction
+
 Our overarching goal is to link the SV information from a sample with the population haplotype block. In theory, our genome consists of multiple haplotype blocks that are shared among the individuals from all populations. At any given locus, certain haplotypes are more prone to the disease than others depending on the type of variation they carry. Thus, linking the mutation information with the haplotype would enhance our understanding of the implications of a given mutation (or variation) and relatedness between individuals in a population. In this hackathon, we aim to develop a pipeline (or workflow) that would enable us to do so.
 
 We are taking the help of existing tools for phasing (SHAPEIT and IMPUTE) and relatedness calculation (ARG-Needle) to obtain the haplotype blocks containing SV information and their relatedness with each other. We then create a similarity matrix for the haplotype blocks for all samples within different populations. We further link this information to SVs (in vcf file).
@@ -15,8 +16,11 @@ We are taking the help of existing tools for phasing (SHAPEIT and IMPUTE) and re
 ![image](https://github.com/user-attachments/assets/cc02f217-4e04-4904-90ab-a228b9f5edf2)
 
 ## Methods
+
 We built a DNAnexus applet which takes vcf files as an input and generates similarity matrix among the haplotype blocks as an output. The process involves multiple steps where first, the vcf files are phased by SHAPEIT5 to generate .map file for genetic map and by IMPUTE to generate .hap file. Both .map and .hap files are provided as an input for ARG-Needle which generates graphs for the haplotype blocks. A custom script then calculates relatedness between haplotype blocks. 
 To test our workflow, we leveraged the genomic data for chromosome 6 from 1000 Genome Project for three populations (each population containing 100 individuals), namely Dai Chinese (CDX), Puerto Rican from Puerto Rico (PUR), British from England and Scotland (GBR). 
+
+During the hackathon, we developed a prototype workflow for haplotype block similarity calculation. Firstly, as the proof-of-concept, we took phased VCF files from 1000Genomes for chromosome 6 from 3 populations. The VCF files had been phased with SHAPEIT2. Then, we used Plink2 to convert the phased VCF files to HAP files. We used this data as input for ARG-needle (documentation: https://palamaralab.github.io/software/argneedle/manual/).
 
 ### Workflow
 
