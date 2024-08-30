@@ -1,4 +1,4 @@
-> BCM / DNAnexus Hackathon, Aug 28-31, 2024
+> BCM HGSC / DNAnexus Hackathon, Aug 28-31, 2024
 
 <img width="610" alt="image" src="https://github.com/user-attachments/assets/d829bb85-ca7f-4b12-b28e-89604c5f37c0">
 
