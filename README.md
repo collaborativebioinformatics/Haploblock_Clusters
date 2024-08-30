@@ -5,8 +5,7 @@
 
 # Haploblock_Clusters aka "Baby Toy"
 
-![baby_toy](https://github.com/user-attachments/assets/23bc5a7c-f7f1-4532-921d-59c160c77b93)
-
+![baby_toy](./baby_toy.png)
 
 ## Contributors
 
@@ -18,10 +17,7 @@ Our overarching goal is to generate a similarity matrix of interpopulation haplo
 
 We are taking the help of existing tools for phasing (SHAPEIT and Beagle) and relatedness calculation (ARG-Needle) to obtain the haplotype blocks containing SV information and their relatedness with each other. We then create a similarity matrix for the haplotype blocks for all samples within different populations. We further link this information to SVs (in vcf file).
 
-
-# Haplotype blocks in one individual arederived from the population 
-
-![image](https://github.com/user-attachments/assets/cc02f217-4e04-4904-90ab-a228b9f5edf2)
+Haplotype blocks in one individual are derived from the population 
 
 ## Methods
 
@@ -48,6 +44,8 @@ run arg-needle for chunk 1 (i.e., the first haploblock) -> then parallelize 
 ## Results
 
 We leverage the principles of ancestral recombination graph (ARG) that are used to determine how ancestral genetic material is passed onto its descendants considering the coalescent time and recombination. ARG-Needle program can infer history of inheritance from hundreds of thousands of genome samples. 
+
+![baby_tree](./baby_tree.png)
 
 ## Use cases
   - rare germline mutations
