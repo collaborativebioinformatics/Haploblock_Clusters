@@ -18,6 +18,21 @@ We are taking the help of existing tools for phasing (SHAPEIT and Beagle) and re
 
 ## Methods
 
+#### Data
+
+1000Genomes (The 1000 Genomes Project Consortium, 2015)
+
+We downloaded phased VCFs (shapeit2) for 3 populations:
+- British in England and Scotland (GBR): https://www.internationalgenome.org/data-portal/population/GBR
+- Puerto Rican in Puerto Rico (PUR): https://www.internationalgenome.org/data-portal/population/PUR
+- Chinese Dai in Xishuangbanna, China (CDX): https://www.internationalgenome.org/data-portal/population/CDX
+ 
+As well as a genetic map from: ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/pilot_data/technical/reference/genetic_map_b36.tar.gz
+
+#### Workflow
+
+<img width="316" alt="image" src="https://github.com/user-attachments/assets/92e0c5fc-49ea-440a-a004-c9e34468fa12">
+
 We built a DNAnexus applet which takes vcf files as an input and generates similarity matrix among the haplotype blocks as an output. The process involves multiple steps where first, the vcf files are phased by SHAPEIT5 to generate .map file for genetic map and by IMPUTE to generate .hap file. Both .map and .hap files are provided as an input for ARG-Needle which generates graphs for the haplotype blocks. A custom script then calculates relatedness between haplotype blocks. 
 To test our workflow, we leveraged the genomic data for chromosome 6 from 1000 Genome Project for three populations (each population containing 100 individuals), namely Dai Chinese (CDX), Puerto Rican from Puerto Rico (PUR), British from England and Scotland (GBR). 
 
@@ -33,10 +48,6 @@ use `divide_into_chunks.py` (chr6 is divided into 2089 haploblocks) 
 run arg-needle for chunk 1 (i.e., the first haploblock) -> then parallelize 
 
 `arg_needle --hap_gz CDX_chr6_chunk1.hap --map genetic_map_b36 --chromosome 6 --out CDX_chr6_chunk1 --mode sequence` (error with .map for now)
-
-### Workflow
-
-<img width="316" alt="image" src="https://github.com/user-attachments/assets/92e0c5fc-49ea-440a-a004-c9e34468fa12">
 
 ## Results
 
@@ -55,17 +66,6 @@ We leverage the principles of ancestral recombination graph (ARG) that are used 
   - Understand the relative aggressiveness of cancer driver mutations in the background of their haploblocks
   - Understand the presentation of cancer subtypes in the context of other haploblocks
   - Understand the relative contribution of MHC, Ig and HLA related haploblocks to infectious disease susceptibility and presentation
-
-## Data
-
-1000Genomes (The 1000 Genomes Project Consortium, 2015)
-
-We downloaded phased VCFs (shapeit2) for 3 populations:
-- British in England and Scotland (GBR): https://www.internationalgenome.org/data-portal/population/GBR
-- Puerto Rican in Puerto Rico (PUR): https://www.internationalgenome.org/data-portal/population/PUR
-- Chinese Dai in Xishuangbanna, China (CDX): https://www.internationalgenome.org/data-portal/population/CDX
- 
-As well as a genetic map from: ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/pilot_data/technical/reference/genetic_map_b36.tar.gz
 
 ## DNAnexus prototype workflow
 
@@ -105,24 +105,6 @@ As well as a genetic map from: ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/pilot_da
 - [x] Run ARG needle (Minal)
 - Glue software together (Elena/Jedrzej/Ben)
 - Test use cases (ALL)
-
-### Software that take phased genomic data as input: 
-
-1. HaploNet: 10.1101/gr.276813.122
-2. ChromoPainter: 10.1371/journal.pgen.1002453
-3. Genomatnn: 10.7554/elife.64669
-4. Flagel, 2019: 10.1093/molbev/msy224
-5. S/HIC & diploS/HIC: 10.1534/g3.118.200262
-6. RFMix: 10.1016/j.ajhg.2013.06.020
-7. hap-IBD: 10.1016/j.ajhg.2020.02.010
-8. IBDrecomb: 10.1016/j.ajhg.2020.05.016
-9. Browning, 2020: 10.1016/j.ajhg.2020.09.010
-10. TRUFFLE: 10.1016/j.ajhg.2019.05.007
-11. Palamara, 2012: 10.1016/j.ajhg.2012.08.030
-12. Palamara, 2015: 10.1016/j.ajhg.2015.10.006
-13. Tian, 2019: 10.1016/j.ajhg.2019.09.012
-14. FLARE: 10.1016/j.ajhg.2022.12.010
-15. Wohns, 2022: 10.1126/science.abi8264
 
 
 ## References
