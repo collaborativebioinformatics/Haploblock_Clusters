@@ -1,7 +1,6 @@
-> BCM / DNAnexus Hackathon 2024
+> BCM / DNAnexus Hackathon, Aug 28-31, 2024
 
 <img width="610" alt="image" src="https://github.com/user-attachments/assets/d829bb85-ca7f-4b12-b28e-89604c5f37c0">
-
 
 # Haploblock_Clusters aka "Baby Toy"
 
@@ -9,15 +8,13 @@
 
 ## Contributors
 
-Ben Busby, Jedrzej Kubica, Minal Jamsandekar, Umran Yaman, Eleni Mourouzidou, Michael Olufemi
+Ben Busby, Jędrzej Kubica, Minal Jamsandekar, Umran Yaman, Eleni Mourouzidou, Michael Olufemi
 
 ## Introduction
 
 Our overarching goal is to generate a similarity matrix of interpopulation haploblocks, taking into account both rare and common variants. In theory, our genome consists of multiple haplotype blocks that are shared among the individuals from all populations. At any given locus, certain haplotypes are more prone to the disease than others depending on the type of variation they carry. Thus, linking the mutation information with the haplotype would enhance our understanding of the implications of a given mutation (or variation) and relatedness between individuals in a population. In this hackathon, we aim to develop a pipeline (or workflow) that would enable us to do so.
 
 We are taking the help of existing tools for phasing (SHAPEIT and Beagle) and relatedness calculation (ARG-Needle) to obtain the haplotype blocks containing SV information and their relatedness with each other. We then create a similarity matrix for the haplotype blocks for all samples within different populations. We further link this information to SVs (in vcf file).
-
-Haplotype blocks in one individual are derived from the population 
 
 ## Methods
 
@@ -61,7 +58,7 @@ We leverage the principles of ancestral recombination graph (ARG) that are used 
 
 ## Data
 
-1000Genomes
+1000Genomes (The 1000 Genomes Project Consortium, 2015)
 
 We downloaded phased VCFs (shapeit2) for 3 populations:
 - British in England and Scotland (GBR): https://www.internationalgenome.org/data-portal/population/GBR
@@ -138,3 +135,4 @@ As well as a genetic map from: ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/pilot_da
 2. Delaneau, O., Zagury, JF., Robinson, M.R. et al. Accurate, scalable and integrative haplotype estimation. Nat Commun 10, 5436 (2019). https://doi.org/10.1038/s41467-019-13225-y
 3. Lewanski AL, Grundler MC, Bradburd GS. The era of the ARG: an empiricist's guide to ancestral recombination graphs. ArXiv [Preprint]. 2023 Oct 18:arXiv:2310.12070v1. Update in: PLoS Genet. 2024 Jan 18;20(1):e1011110. doi: 10.1371/journal.pgen.1011110. PMID: 37904740; PMCID: PMC10614969.
 4. Zhang, B.C., Biddanda, A., Gunnarsson, Á.F. et al. Biobank-scale inference of ancestral recombination graphs enables genealogical analysis of complex traits. Nat Genet 55, 768–776 (2023). https://doi.org/10.1038/s41588-023-01379-x
+5. The 1000 Genomes Project Consortium. A global reference for human genetic variation. Nature 526, 68–74 (2015). https://doi.org/10.1038/nature15393
