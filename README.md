@@ -82,7 +82,10 @@ As well as a genetic map from: ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/pilot_da
 - Figure out way to look at MHC/HLA/TCR (Minal and Umran)
 
   Major histocompatibility complex (MHC) on chromosome 6 of the human genome is a highly complex and polymorphic region crucial for immune system function, particularly through the Human Leukocyte Antigen (HLA) region, which presents antigens to T-cells. We can extract the MHC variants using bcftools with view functionality, specifying ~5MB MHC regions genomic location(chr6:28510020-33480577, GRCh38), or the bed file obtained conventionally from fasta file with GRCh38 genome build. Alternatively, we can compare our phased haplotype blocks with existing MHC variants, using hap.py (https://github.com/Illumina/hap.py). Recently Shafin K. et al (2021) used a similar approach to benchmark the MHC region against the Genome in a Bottle project (GIAB) truth set (PMID: 34725481).
-  
+
+
+ARGs provide a fine-scale map of recombination events, which is crucial for understanding the breakpoints that define MHC haplotype blocks. By linking ARGs with MHC haplotype blocks, researchers can better understand how recombination and inheritance patterns contribute to disease associations observed in the MHC region. This connection can refine disease mapping efforts, making it possible to more accurately pinpoint causal variants within haplotype blocks that influence disease susceptibility.
+
 - Hypothetical hypothesis journeys and figures (ALL)
 
 ### Step 2:
