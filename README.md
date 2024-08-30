@@ -21,7 +21,17 @@ We built a DNAnexus applet which takes vcf files as an input and generates simil
 To test our workflow, we leveraged the genomic data for chromosome 6 from 1000 Genome Project for three populations (each population containing 100 individuals), namely Dai Chinese (CDX), Puerto Rican from Puerto Rico (PUR), British from England and Scotland (GBR). 
 
 During the hackathon, we developed a prototype workflow for haplotype block similarity calculation. Firstly, as the proof-of-concept, we took phased VCF files from 1000Genomes for chromosome 6 from 3 populations. The VCF files had been phased with SHAPEIT2. Then, we used Plink2 to convert the phased VCF files to HAP files (`plink2 --vcf phased.vcf --export hap --out new_filename_prefix`). We used this data as input for ARG-needle (documentation: https://palamaralab.github.io/software/argneedle/manual/).
-Running ARG-needle on a DNAnexus cloud-workstation (https://documentation.dnanexus.com/developer/cloud-workstation) start with `pip3 install --upgrade pip`, then `PATH=$PATH:/home/dnanexus/.local/bin`, `pip install arg-needle` and finally ``.
+Running ARG-needle on a DNAnexus cloud-workstation (https://documentation.dnanexus.com/developer/cloud-workstation) start with `pip3 install --upgrade pip`, then `PATH=$PATH:/home/dnanexus/.local/bin`, `pip install arg-needle` and finally `arg_needle --hap_gz PUR_chr6.hap --map genetic_map_b36 --chromosome 6 --out PUR_chr6 --mode sequence` (requires a lot of memory).
+
+genetic map hg38: https://alkesgroup.broadinstitute.org/Eagle/downloads/tables/
+
+The main point of the project: split chromosomes into chunks based on recombination hotspots (into haploblocks), genetic_map_b36/hotspots_b36.txt 
+
+use `divide_into_chunks.py` (chr6 is divided into 2089 haploblocks) 
+
+run arg-needle for chunk 1 (i.e., the first haploblock) -> then parallelize 
+
+`arg_needle --hap_gz CDX_chr6_chunk1.hap --map genetic_map_b36 --chromosome 6 --out CDX_chr6_chunk1 --mode sequence` (error with .map for now)
 
 ### Workflow
 
