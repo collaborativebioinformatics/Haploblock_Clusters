@@ -5,7 +5,8 @@
 
 # Haploblock_Clusters aka "Baby Toy"
 
-![image](998071_baby toy mutant dna _xl-1024-v1-0.png)
+![baby_toy](https://github.com/user-attachments/assets/23bc5a7c-f7f1-4532-921d-59c160c77b93)
+
 
 ## Contributors
 
