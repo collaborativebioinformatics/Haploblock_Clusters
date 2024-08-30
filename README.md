@@ -10,7 +10,7 @@
 
 ## Contributors
 
-Ben, Jedrzej, Minal, Umran, Elleni, Michael
+Ben Busby, Jedrzej Kubica, Minal Jamsandekar, Umran Yaman, Eleni Mourouzidou, Michael Olufemi
 
 ## Introduction
 
