@@ -10,7 +10,7 @@
 
 ## Contributors
 
-Ben, Jendrez, Minal, Umran, Elleni, Michael
+Ben, Jedrzej, Minal, Umran, Elleni, Michael
 
 ## Introduction
 
