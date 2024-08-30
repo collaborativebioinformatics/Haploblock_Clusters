@@ -3,11 +3,12 @@
 <img width="610" alt="image" src="https://github.com/user-attachments/assets/d829bb85-ca7f-4b12-b28e-89604c5f37c0">
 
 
-# Haploblock_Clusters
+# Haploblock_Clusters aka "Baby Toy"
+
 
 ## Contributors
 
-Ben, Jendrez, Minal, Umran, Elleni
+Ben, Jendrez, Minal, Umran, Elleni, Michael
 
 ## Introduction
 
