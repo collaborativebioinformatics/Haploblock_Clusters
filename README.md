@@ -12,7 +12,7 @@ Ben Busby, Jędrzej Kubica, Minal Jamsandekar, Umran Yaman, Eleni Mourouzidou, M
 
 Our overarching goal was to generate a similarity matrix of interpopulation haploblocks, taking into account both rare and common variants. In theory, the human genome consists of multiple haplotype blocks that are shared among the individuals from all populations. At any given locus, certain haplotypes are more prone to the disease than others depending on the type of variation they carry. Thus, linking the mutation information with the haplotype would enhance our understanding of the implications of a given mutation (or variation) and relatedness between individuals in a population. In this hackathon, we aimed to develop a bioinformatics workflow that would enable us to do so.
 
-We are taking the help of software for haplotype phasing SHAPEIT5 (Hofmeister et al., 2023) and relatedness calculation ARG-Needle (Zhang et al., 2023) to obtain the haplotype blocks containing SV information and their relatedness with each other. We then create a similarity matrix for the haplotype blocks for all samples within different populations. We further link this information to SVs (in vcf file).
+We are taking the help of software for haplotype phasing SHAPEIT5 (Hofmeister et al., 2023) and relatedness calculation ARG-Needle (Zhang et al., 2023) to obtain the haplotype blocks containing SV information and their relatedness with each other. We then create a similarity matrix for the haplotype blocks for all samples within different populations. We further link this information to SVs (in a VCF file).
 
 ## Methods
 
@@ -73,8 +73,9 @@ Due to a short timeframe of the hackathon, we produced a proof-of-principle resu
 - [x] Download phased vcfs from 1000 genome for one chromosome (Jedrzej)
 - [x] Download recombination hotspots for chromosome (Ben)
 - [x] Make haploblock coordinate system by interpolating between recombination hotspots (Jedrzej and Ben) 
-- [x] Get ARG-needle working on DNANexus (Ben and Minal)
+- [x] Get ARG-Needle working on DNANexus (Ben and Minal)
 - [x] Get SHAPEIT5 working on DNAnexus (Ben and Jedrzej)
+- [x] Run ARG-Needle (Minal)
 - [ ] Get the similarity matrix (Jedrzej)
 - [x] Figure out way to merge rare variants information to the haploblocks (Michael and Jedrzej)
   
@@ -93,14 +94,12 @@ _Notes_
 
   The approach to look at MHC/HLA region in our project could be extracting the MHC variants from ARG-Needle output and compare with existing MHC variants to MHC variants from GIAB benchmark study (PMID: 32963235). By doing that, we would be suggesting to infer a point/block of haplotype blocks from the variants truth set. For that, We can use bcftools with view functionality, specifying ~5MB MHC regions genomic location(chr6:28510020-33480577, GRCh38), or the bed file obtained conventionally from fasta file with GRCh38 genome build. Alternatively, we can compare our phased haplotype blocks with existing MHC variants, using hap.py (https://github.com/Illumina/hap.py). Recently Shafin K. et al (2021) used a similar approach to benchmark the MHC region against the Genome in a Bottle project (GIAB) truth set (PMID: 34725481).
 
-- [ ] Hypothetical hypothesis journeys and figures (ALL)
-
 ### Step 2:
 
-- Get the SV dataset and try to implement step 1 on the SV dataset/WGS (Elena)
-- [x] Run ARG needle (Minal)
-- Glue software together (Elena/Jedrzej/Ben)
-- Test use cases (ALL)
+- [ ] Hypothetical hypothesis journeys and figures (ALL)
+- [ ] Get the SV dataset and try to implement step 1 on the SV dataset/WGS (Elena)
+- [ ] Glue software together (Elena/Jedrzej/Ben)
+- [ ] Test use cases (ALL)
 
 ## References
 
