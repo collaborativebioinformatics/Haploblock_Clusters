@@ -1,8 +1,4 @@
 > BCM HGSC / DNAnexus Hackathon, Aug 28-31, 2024
->
-```dx mkdir Ben```
-
-```dx cd Ben```
 
 # Haploblock_Clusters 
 
