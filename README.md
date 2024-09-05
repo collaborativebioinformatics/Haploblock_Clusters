@@ -61,6 +61,7 @@ Due to a short timeframe of the hackathon, we produced a proof-of-principle resu
   - Understand the relative aggressiveness of cancer driver mutations in the background of their haploblocks
   - Understand the presentation of cancer subtypes in the context of other haploblocks
   - Understand the relative contribution of MHC, Ig and HLA related haploblocks to infectious disease susceptibility and presentation
+  - Feed matrices into an autoencoder and find combinations of significant features for a given phenotype or subphenotype.  
 
 ## DNAnexus prototype workflow
 
