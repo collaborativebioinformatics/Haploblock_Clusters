@@ -67,41 +67,6 @@ Due to a short timeframe of the hackathon, we produced a proof-of-principle resu
 
 <img width="1143" alt="image" src="https://github.com/user-attachments/assets/b20014b7-da86-499b-92d1-b5a9837554d1">
 
-## Hackathon plan
-
-### Step 1:
-
-- [x] Download phased vcfs from 1000 genome for one chromosome (Jedrzej)
-- [x] Download recombination hotspots for chromosome (Ben)
-- [x] Make haploblock coordinate system by interpolating between recombination hotspots (Jedrzej and Ben) 
-- [x] Get ARG-Needle working on DNANexus (Ben and Minal)
-- [x] Get SHAPEIT5 working on DNAnexus (Ben and Jedrzej)
-- [x] Run ARG-Needle (Minal)
-- [ ] Get the similarity matrix (Jedrzej)
-- [x] Figure out way to merge rare variants information to the haploblocks (Michael and Jedrzej)
-  
-        Rare variants are identified and extracted using bcftools based on a MAF threshold of less than 1%.
-        The extracted variants are annotated with functional and genomic information using ANNOVAR.
-        Using bedtools, these variants are mapped to haploblocks
-  
-- [ ] Figure out way to look at cancer drivers (Michael and Elena)
-- [x] Figure out way to look at MHC/HLA/TCR (Minal and Umran)
-
-_Notes_
-
-   Major histocompatibility complex (MHC) on chromosome 6 of the human genome is a highly complex and polymorphic region crucial for immune system function, particularly through the Human Leukocyte Antigen (HLA) region, which presents antigens to T-cells. First-generation linkage disequilibrium (LD) or "genetic maps" aims to show how certain alleles inherited together and how haplotypes are organised within a MHC region (haplotype blocks). Identifying haplotype blocka are more efficient way to discover genes predisposing traits such as disease; instead of identifying individual SNPs, one can identify haplotype block with strong genetic association, thus approaches such as haplotype-tagSNPs would be used, decreasing the markers needed in the mapping process (PMID: 11586306). Previous efforts to create a diploid assembly has been done by Chin et al. (2020), where they created a human genome benchmark from a diploid assembly of the HG002 sample grom Genome in a Bottle (GIAB), and identifying phased small and structural variants. This benchmark covers 94% of the MHC with 22,368 variants under 50 bp, 49% more than a mapping-based benchmark, and effectively detects errors in mapping-based callsets in regions with dense, complex variation (PMID: 32963235). 
-
-  ARGs provide a fine-scale map of recombination events, which is crucial for understanding the breakpoints that define MHC haplotype blocks. Identifying ARGs within MHC haplotype blocks would allow us to understand how recombination and inheritance patterns contribute to disease associations observed in the MHC region. Thus we can refine mapping to a trait e.g. disease, to more accurately pinpoint causal variants within haplotype blocks that influence disease susceptibility.
-
-  The approach to look at MHC/HLA region in our project could be extracting the MHC variants from ARG-Needle output and compare with existing MHC variants to MHC variants from GIAB benchmark study (PMID: 32963235). By doing that, we would be suggesting to infer a point/block of haplotype blocks from the variants truth set. For that, We can use bcftools with view functionality, specifying ~5MB MHC regions genomic location(chr6:28510020-33480577, GRCh38), or the bed file obtained conventionally from fasta file with GRCh38 genome build. Alternatively, we can compare our phased haplotype blocks with existing MHC variants, using hap.py (https://github.com/Illumina/hap.py). Recently Shafin K. et al (2021) used a similar approach to benchmark the MHC region against the Genome in a Bottle project (GIAB) truth set (PMID: 34725481).
-
-### Step 2:
-
-- [ ] Hypothetical hypothesis journeys and figures (ALL)
-- [ ] Get the SV dataset and try to implement step 1 on the SV dataset/WGS (Elena)
-- [ ] Glue software together (Elena/Jedrzej/Ben)
-- [ ] Test use cases (ALL)
-
 ## References
 
 1. Link V, Schraiber JG, Fan C, Dinh B, Mancuso N, Chiang CWK, Edge MD. Tree-based QTL mapping with expected local genetic relatedness matrices. Am J Hum Genet. 2023 Dec 7;110(12):2077-2091. doi: 10.1016/j.ajhg.2023.10.017. PMID: 38065072; PMCID: PMC10716520.
@@ -113,3 +78,15 @@ _Notes_
 7. Lewanski AL, Grundler MC, Bradburd GS. The era of the ARG: an empiricist's guide to ancestral recombination graphs. ArXiv [Preprint]. 2023 Oct 18:arXiv:2310.12070v1. Update in: PLoS Genet. 2024 Jan 18;20(1):e1011110. doi: 10.1371/journal.pgen.1011110. PMID: 37904740; PMCID: PMC10614969.
 8. Zhang, B.C., Biddanda, A., Gunnarsson, Á.F. et al. Biobank-scale inference of ancestral recombination graphs enables genealogical analysis of complex traits. Nat Genet 55, 768–776 (2023). https://doi.org/10.1038/s41588-023-01379-x
 9. The 1000 Genomes Project Consortium. A global reference for human genetic variation. Nature 526, 68–74 (2015). https://doi.org/10.1038/nature15393
+10. Singhal P, Veturi Y, Dudek SM, Lucas A, Frase A, van Steen K, Schrodi SJ, Fasel D, Weng C, Pendergrass R, Schaid DJ, Kullo IJ, Dikilitas O, Sleiman PMA, Hakonarson H, Moore JH, Williams SM, Ritchie MD, Verma SS. Evidence of epistasis in regions of long-range linkage disequilibrium across five complex diseases in the UK Biobank and eMERGE datasets. Am J Hum Genet. 2023 Apr 6;110(4):575-591. doi: 10.1016/j.ajhg.2023.03.007. PMID: 37028392; PMCID: PMC10119154.
+11. Nielsen, R., Vaughn, A.H. & Deng, Y. Inference and applications of ancestral recombination graphs. Nat Rev Genet (2024). https://doi.org/10.1038/s41576-024-00772-4
+
+
+Notes:
+
+   Major histocompatibility complex (MHC) on chromosome 6 of the human genome is a highly complex and polymorphic region crucial for immune system function, particularly through the Human Leukocyte Antigen (HLA) region, which presents antigens to T-cells. First-generation linkage disequilibrium (LD) or "genetic maps" aims to show how certain alleles inherited together and how haplotypes are organised within a MHC region (haplotype blocks). Identifying haplotype blocka are more efficient way to discover genes predisposing traits such as disease; instead of identifying individual SNPs, one can identify haplotype block with strong genetic association, thus approaches such as haplotype-tagSNPs would be used, decreasing the markers needed in the mapping process (PMID: 11586306). Previous efforts to create a diploid assembly has been done by Chin et al. (2020), where they created a human genome benchmark from a diploid assembly of the HG002 sample grom Genome in a Bottle (GIAB), and identifying phased small and structural variants. This benchmark covers 94% of the MHC with 22,368 variants under 50 bp, 49% more than a mapping-based benchmark, and effectively detects errors in mapping-based callsets in regions with dense, complex variation (PMID: 32963235). 
+
+  ARGs provide a fine-scale map of recombination events, which is crucial for understanding the breakpoints that define MHC haplotype blocks. Identifying ARGs within MHC haplotype blocks would allow us to understand how recombination and inheritance patterns contribute to disease associations observed in the MHC region. Thus we can refine mapping to a trait e.g. disease, to more accurately pinpoint causal variants within haplotype blocks that influence disease susceptibility.
+
+  The approach to look at MHC/HLA region in our project could be extracting the MHC variants from ARG-Needle output and compare with existing MHC variants to MHC variants from GIAB benchmark study (PMID: 32963235). By doing that, we would be suggesting to infer a point/block of haplotype blocks from the variants truth set. For that, We can use bcftools with view functionality, specifying ~5MB MHC regions genomic location(chr6:28510020-33480577, GRCh38), or the bed file obtained conventionally from fasta file with GRCh38 genome build. Alternatively, we can compare our phased haplotype blocks with existing MHC variants, using hap.py (https://github.com/Illumina/hap.py). Recently Shafin K. et al (2021) used a similar approach to benchmark the MHC region against the Genome in a Bottle project (GIAB) truth set (PMID: 34725481).
+
