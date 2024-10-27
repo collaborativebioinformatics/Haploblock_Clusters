@@ -8,6 +8,10 @@
 
 Ben Busby, Jędrzej Kubica, Minal Jamsandekar, Umran Yaman, Eleni Mourouzidou, Michael Olufemi
 
+## Recent work 
+
+Additional work was done on this project by a team at the Nucleate Pittsburgh Hackathon in October 2024.  That work can be found here: https://github.com/ShijieTang/BioHack_Haplotype
+
 ## Introduction
 
 Our overarching goal was to generate a similarity matrix of interpopulation haploblocks, taking into account both rare and common variants. In theory, the human genome consists of multiple haplotype blocks that are shared among the individuals from all populations. At any given locus, certain haplotypes are more prone to the disease than others depending on the type of variation they carry. Thus, linking the mutation information with the haplotype would enhance our understanding of the implications of a given mutation (or variation) and relatedness between individuals in a population. In this hackathon, we aimed to develop a bioinformatics workflow that would enable us to do so.
