@@ -50,7 +50,8 @@ We leverage the principles of ancestral recombination graph (ARG) that are used 
 
 Due to a short timeframe of the hackathon, we produced a proof-of-principle result (a "baby tree") that represents the visualization of ARG-Needle output for a small chunk of chromosome 6 (100 SNPs of the first hyploblock) for the CDX population. For the visualization we first converted the ARGN output from ARG-Needle into a _tskit.TreeSequence_ object, and used _tskit_ to produce the SVG figure.
 
-![baby_tree](./figures/baby_tree.png)
+![CDX_chr6_chunk1_100](https://github.com/user-attachments/assets/e7345308-1eef-4c25-b355-16e6db4e0d55)
+
 
 ## Use cases
 
